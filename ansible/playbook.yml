@@ -1,0 +1,30 @@
+---
+- name: Configure Web Server
+  hosts: web
+  become: yes
+
+  tasks:
+
+    - name: Update packages
+      dnf:
+        name: "*"
+        state: latest
+
+    - name: Install Apache
+      dnf:
+        name: httpd
+        state: present
+
+    - name: Enable Apache
+      service:
+        name: httpd
+        state: started
+        enabled: yes
+
+    - name: Copy Website Files
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        owner: root
+        group: root
+        mode: '0644'
