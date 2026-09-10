@@ -52,7 +52,13 @@ Ansible Phase
 
 
 ---
-
+The Workflow Architecture
+[ Terraform ] ---> Provisions Cloud Infrastructure (e.g., AWS EC2, Security Groups)
+     │
+     └───> Outputs IPs / Generates Inventory
+             │
+             ▼
+[ Ansible ] ----> Configures OS, Installs Packages, & Deploys Application
 ## 🚀 Execution Guide
 
 ### Prerequisites
