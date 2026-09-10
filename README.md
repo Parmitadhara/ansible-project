@@ -105,3 +105,5 @@ State Management: .gitignore excludes local state files (terraform.tfstate*) to 
 Provider Cleanliness: Cached binary dependencies (.terraform/ directories and plugins) are untracked to keep repository sizes minimal.
 
 Idempotency: Re-running the Ansible playbook ensures no drift and guarantees state consistency across multiple executions.
+<img width="1024" height="527" alt="image" src="https://github.com/user-attachments/assets/d5945d38-7678-4bc0-85c7-137e75a148c9" />
+
